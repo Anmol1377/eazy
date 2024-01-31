@@ -149,7 +149,7 @@
       '>Maybe you haven't the right to use or else we are still processing your order kindly give us 24 hours after a successful transaction</p>
       <div class='a' style='display:flex;justify-content:center;'>
       <a target='_blank' href='https://security.bikswee.com'>Viste Site</a>
-      <a style='margin-left:20px;' href='mailto:anmol@bikswee.com'>Mail Us!</a>
+      <a style='margin-left:20px;' href='mailto:contact@bikswee.com'>Mail Us!</a>
      
       </div>");
           }
