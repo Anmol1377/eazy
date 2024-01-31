@@ -1,0 +1,20 @@
+
+=======================================================================
+    EaZy Security for WordPress
+    Website Malware Scan Report 
+    
+    Scanned Website:        http://testbikswee.free.nf    
+    Scan type:              Internal
+    Report generation time: 2023-10-05 12:09
+
+    Scan launch time:       2023-10-05 12:09    
+    Scanned files:          0
+    Clean:                  0
+    Potentially Suspicious: 0
+    Suspicious:             0
+    Malicious:              0
+    
+    © 2023 EaZy Security. All rights reserved.
+    For any questions about this report: support@bikswee.com
+=======================================================================
+

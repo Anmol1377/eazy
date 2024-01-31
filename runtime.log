@@ -1,0 +1,5 @@
+[12:09:02] INFO	Starting investigation of /home/vol11_7/infinityfree.com/if0_34713505/htdocs/
+[12:09:02] INFO	Patterns database /home/vol11_7/infinityfree.com/if0_34713505/htdocs/wp-content/plugins/EaZy_security/patterns.db loaded successfully
+[12:09:02] INFO	Content of ezy_scan_cron_args storred successfully
+[12:09:02] INFO	High sensitive internal scan scheduled. Next run 12:09:12
+[12:09:02] INFO	Starting high sensitive internal scan of [/home/vol11_7/infinityfree.com/if0_34713505/htdocs/]
