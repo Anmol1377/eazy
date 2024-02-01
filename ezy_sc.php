@@ -21,16 +21,16 @@ if (is_admin()) {
     
     function ezy_sc_adminmenu()
     {
-        $page_title = 'Login';
+        $page_title = 'EaZy Security';
         $menu_title = 'EaZy Security';
         $capability = 'manage_options';
-        $menu_slug  = 'ezy_sc-login';
-        $function   = 'ezy_sc_login';
+        $menu_slug  = 'ezy_sc';
+        $function   = 'ezy_sc_dashboard';
         $icon_url   = 'dashicons-shield-alt';
         
         add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url);
         add_submenu_page(NULL, 'Dashboard', 'Dashboard', 'manage_options', 'ezy_sc', 'ezy_sc_dashboard');
-        add_submenu_page('ezy_sc', 'Login', 'Login', 'manage_options', 'ezy_sc-login', 'ezy_sc_login');
+        // add_submenu_page('ezy_sc', 'Login', 'Login', 'manage_options', 'ezy_sc-login', 'ezy_sc_login');
         add_submenu_page(NULL, 'Settings', 'Settings', 'manage_options', 'ezy_sc-settings', 'ezy_sc_settings');
         add_submenu_page(NULL, 'Protection Modules', 'Protection Modules', 'manage_options', 'ezy_sc-modules', 'ezy_sc_modules');
         add_submenu_page(NULL, 'Logs', 'Logs', 'manage_options', 'ezy_sc-logs', 'ezy_sc_logs');
@@ -819,16 +819,18 @@ $(".select2").select2({
         include_once "contact-us.php";
         echo '</div>';
     }
-	function ezy_sc_login()
-    {
-        global $wpdb;
-        ezy_sc_header();
+    
+	// function ezy_sc_login()
+    // {
+    //     global $wpdb;
+    //     ezy_sc_header();
         
-        $pagetitle = "Login";
-        // include_once "header.php";
-        include_once "login.php";
-        echo '</div>';
-    }
+    //     $pagetitle = "Login";
+    //     // include_once "header.php";
+    //     include_once "login.php";
+    //     echo '</div>';
+    // }
+
 	// function ezy_sc_notification()
     // {
     //     global $wpdb;

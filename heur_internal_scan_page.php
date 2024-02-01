@@ -1,6 +1,6 @@
 <!-- div class="container" style="float:left;" -->
 <?php
-include_once 'ezy_sc_sub_module.php';
+// include_once 'ezy_sc_sub_module.php';
 //  ;
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once 'ezy_sc_sub_module.php';
+// include_once 'ezy_sc_sub_module.php';
 //  ;
 //include_once 'login.php';
 //session_start();
