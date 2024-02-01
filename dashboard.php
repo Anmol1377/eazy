@@ -17,6 +17,11 @@ if (!defined('ABSPATH')) {
     die('Page not found');
 }
 
+    if ( es_fs()->is_plan('premium', true) ) {
+        // .. logic related to premium plan only ...
+   
+
+
 // Delete outdated cache files
 $now   = time();
 
@@ -1182,4 +1187,9 @@ $wpgcustom_js4 .= '
 wp_register_script('ezy_sc-js4', '', [], '', true);
 wp_enqueue_script('ezy_sc-js4');
 wp_add_inline_script('ezy_sc-js4', $wpgcustom_js4);
+
+
+
+}
+
 ?>

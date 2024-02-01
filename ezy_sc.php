@@ -8,6 +8,44 @@
  * Text Domain: ezy_sc-text
  */
 
+
+ if ( ! function_exists( 'es_fs' ) ) {
+    // Create a helper function for easy SDK access.
+    function es_fs() {
+        global $es_fs;
+
+        if ( ! isset( $es_fs ) ) {
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+
+            $es_fs = fs_dynamic_init( array(
+                'id'                  => '14876',
+                'slug'                => 'eazy-security',
+                'type'                => 'plugin',
+                'public_key'          => 'pk_08fa0dafbae425e7cf3d3afa4edf9',
+                'is_premium'          => true,
+                'is_premium_only'     => true,
+                'has_addons'          => false,
+                'has_paid_plans'      => true,
+                'is_org_compliant'    => false,
+                'menu'                => array(
+                    'slug'           => 'ezy_sc',
+                    'support'        => false,
+                ),
+            ) );
+        }
+
+        return $es_fs;
+    }
+
+    // Init Freemius.
+    es_fs();
+    // Signal that SDK was initiated.
+    do_action( 'es_fs_loaded' );
+}
+
+
+
 if (!defined('ABSPATH')) {
     die('Error 404');
 }
@@ -25,7 +63,8 @@ if (is_admin()) {
         $menu_title = 'EaZy Security';
         $capability = 'manage_options';
         $menu_slug  = 'ezy_sc';
-        $function   = 'ezy_sc_dashboard';
+        // $menu_slug ='eazy-security';
+        $function   = 'ezy_sc_licence';
         $icon_url   = 'dashicons-shield-alt';
         
         add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url);
@@ -597,6 +636,21 @@ $(".select2").select2({
     <?php
     }
     
+
+    function ezy_sc_licence()
+    {
+        global $wpdb;
+        ezy_sc_header();
+        // header("location: /admin.php?page=eazy-security");
+        $pagetitle = "Dashboard";
+        include_once "header.php";
+        include_once "dashboard.php";
+        // include_once "login.php";
+
+        // echo '</div>';
+    }
+
+
     function ezy_sc_dashboard()
     {
         global $wpdb;
@@ -819,7 +873,7 @@ $(".select2").select2({
         include_once "contact-us.php";
         echo '</div>';
     }
-
+    
 	// function ezy_sc_login()
     // {
     //     global $wpdb;
