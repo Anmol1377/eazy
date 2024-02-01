@@ -3,7 +3,7 @@
  * Plugin Name: EaZy security
  * Plugin URI:  https://security.bikswee.com
  * Description: WordPress Security, Firewall & Anti-Spam 
- * Version:     2.3
+ * Version:     3.3
  * Author:      EaZy security
  * Text Domain: ezy_sc-text
  */
@@ -819,7 +819,7 @@ $(".select2").select2({
         include_once "contact-us.php";
         echo '</div>';
     }
-    
+
 	// function ezy_sc_login()
     // {
     //     global $wpdb;
