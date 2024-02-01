@@ -1,2 +1,2 @@
 # eazy
-eazy new dev from admin
+eazy new dev from admin.
