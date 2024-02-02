@@ -7,11 +7,22 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
     die;
 
 }
-if ( function_exists( 'es_fs' ) ) {
 
-    // Not like register_uninstall_hook(), you do NOT have to use a static function.
-    es_fs()->add_action('after_uninstall', 'es_fs_uninstall_cleanup');
+if ( ! function_exists( 'es_fs' ) ) {
+    require_once dirname(__FILE__) . '/freemius/start.php';
 }
+
+es_fs()->add_action( 'after_uninstall', 'es_fs_uninstall_cleanup' );
+
+// Define your uninstall cleanup function
+function es_fs_uninstall_cleanup() {
+    // Your existing uninstall logic here from the _uninstall_plugin_hook method
+    // Make sure to adapt the logic as needed
+    self::_uninstall_plugin_hook();
+}
+
+
+
 //Delete plugin options
 
 delete_option('wpg_mail_notifications');

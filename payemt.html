@@ -1,0 +1,26 @@
+<button id="purchase">Buy Button</button>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://checkout.freemius.com/checkout.min.js"></script>
+<script>
+    var handler = FS.Checkout.configure({
+        plugin_id:  '14876',
+        plan_id:    '24773',
+        public_key: 'pk_08fa0dafbae425e7cf3d3afa4edf9',
+        image:      'https://your-plugin-site.com/logo-100x100.png'
+    });
+    
+    $('#purchase').on('click', function (e) {
+        handler.open({
+            name     : 'EaZy Security',
+            licenses : 1,
+            // You can consume the response for after purchase logic.
+            purchaseCompleted  : function (response) {
+                // The logic here will be executed immediately after the purchase confirmation.                                // alert(response.user.email);
+            },
+            success  : function (response) {
+                // The logic here will be executed after the customer closes the checkout, after a successful purchase.                                // alert(response.user.email);
+            }
+        });
+        e.preventDefault();
+    });
+</script>

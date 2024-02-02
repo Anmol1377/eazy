@@ -903,7 +903,7 @@ $(".select2").select2({
     {
         global $wpdb;
         
-        include_once "uninstall.php";
+        include_once "ezy_sc_un.php";
     }
     
 } else {
