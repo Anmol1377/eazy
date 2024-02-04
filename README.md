@@ -1,2 +1,1 @@
-# eazy
-eazy new dev from admin
+lp of eqzy 
