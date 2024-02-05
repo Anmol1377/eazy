@@ -1,16 +1,8 @@
 <?php
-// include_once 'ezy_sc_sub_module.php';
-//  ;
-//include_once 'login.php';
-//session_start();
+//Hello from dev
 ?>
 <?php
- //session_start();
- //if(!isset($_SESSION['login'])){
- //    header("location: /admin.php?page=ezy_sc-login");
-     // header("location: http://localhost/wordpress/wp-admin/admin.php?page=ezy_sc-login");
- //}
-//session_abort();
+
 ?>
 <?php
 if (!defined('ABSPATH')) {

@@ -3,7 +3,7 @@
  * Plugin Name: EaZy security
  * Plugin URI:  https://security.bikswee.com
  * Description: WordPress Security, Firewall & Anti-Spam 
- * Version:     3.3
+ * Version:     3.4
  * Author:      EaZy security
  * Text Domain: ezy_sc-text
  */
@@ -69,7 +69,6 @@ if (is_admin()) {
         
         add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url);
         add_submenu_page(NULL, 'Dashboard', 'Dashboard', 'manage_options', 'ezy_sc', 'ezy_sc_dashboard');
-        // add_submenu_page('ezy_sc', 'Login', 'Login', 'manage_options', 'ezy_sc-login', 'ezy_sc_login');
         add_submenu_page(NULL, 'Settings', 'Settings', 'manage_options', 'ezy_sc-settings', 'ezy_sc_settings');
         add_submenu_page(NULL, 'Protection Modules', 'Protection Modules', 'manage_options', 'ezy_sc-modules', 'ezy_sc_modules');
         add_submenu_page(NULL, 'Logs', 'Logs', 'manage_options', 'ezy_sc-logs', 'ezy_sc_logs');
@@ -874,27 +873,7 @@ $(".select2").select2({
         echo '</div>';
     }
     
-	// function ezy_sc_login()
-    // {
-    //     global $wpdb;
-    //     ezy_sc_header();
-        
-    //     $pagetitle = "Login";
-    //     // include_once "header.php";
-    //     include_once "login.php";
-    //     echo '</div>';
-    // }
-
-	// function ezy_sc_notification()
-    // {
-    //     global $wpdb;
-    //     ezy_sc_header();
-        
-    //     $pagetitle = "Notification";
-    //     include_once "header.php";
-    //     include_once "notice.php";
-    //     echo '</div>';
-    // }
+	
     
     //Uninstall
     register_uninstall_hook(__FILE__, 'ezy_sc_uninstall');
